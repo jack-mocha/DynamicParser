@@ -19,4 +19,12 @@ parsed = parser.Parse(config);
 lastname = parsed.LastName;
 Console.WriteLine(lastname);
 
+//Using DynamicObject
+parser = new DynamicObjectParser();
+parsed = parser.Parse(config);
+lastname = parsed.LastName;
+Console.WriteLine(lastname);
+var isValid = parsed["IsValid"];
+Console.WriteLine(isValid);
+
 Console.WriteLine("END");
